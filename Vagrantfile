@@ -16,4 +16,12 @@ Vagrant.configure(2) do |config|
        sudo locale-gen de_DE.UTF-8
      "
   end
+  config.vm.define "jenkinsSlave" do |jenkinsSlave|
+  # Customize the amount of memory on the VM:
+     jenkinsSlave.vm.hostname = "jenkinsSlave"
+     jenkinsSlave.vm.network "private_network", ip: "10.0.3.112"
+     config.vm.provision :shell, :inline => "sudo apt-get update;
+       sudo locale-gen de_DE.UTF-8
+     "
+  end
 end
