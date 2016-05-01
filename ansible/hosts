@@ -1,4 +1,5 @@
-[jenkinsMaster]
-10.0.3.111 ansible_user=vagrant ansible_ssh_private_key_file=~/git/clc-london/.vagrant/machines/jenkinsMaster/virtualbox/private_key
-[jenkinsSlave]
-10.0.3.112 ansible_user=vagrant ansible_ssh_private_key_file=~/git/clc-london/.vagrant/machines/jenkinsSlave/virtualbox/private_key
+[jenkins_master]
+10.0.3.111 ansible_user=vagrant ansible_ssh_private_key_file=.vagrant/machines/master/virtualbox/private_key
+
+[jenkins_slave]
+10.0.3.112 ansible_user=vagrant ansible_ssh_private_key_file=.vagrant/machines/slave1/virtualbox/private_key
