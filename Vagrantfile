@@ -9,7 +9,6 @@ Vagrant.configure(2) do |config|
   config.vm.box = "ubuntu/trusty64"
   
   config.vm.define "jenkinsMaster" do |jenkinsMaster|
-  # Customize the amount of memory on the VM:
      jenkinsMaster.vm.hostname = "jenkinsMaster"
      jenkinsMaster.vm.network "private_network", ip: "10.0.3.111"
      config.vm.provision :shell, :inline => "sudo apt-get update;
