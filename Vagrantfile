@@ -13,13 +13,11 @@ Vagrant.configure(2) do |config|
   config.vm.provision :shell, :inline => "apt-get update; locale-gen de_DE.UTF-8 en_US.UTF-8"
 
   config.vm.define "master" do |jenkinsMaster|
-    # Customize the amount of memory on the VM:
     jenkinsMaster.vm.hostname = "jenkins-master"
     jenkinsMaster.vm.network "private_network", ip: "10.0.3.111"
   end
 
   config.vm.define "slave1" do |jenkinsSlave|
-    # Customize the amount of memory on the VM:
     jenkinsSlave.vm.hostname = "jenkins-slave1"
     jenkinsSlave.vm.network "private_network", ip: "10.0.3.112"
   end
