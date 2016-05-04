@@ -1,0 +1,17 @@
+---
+
+- name: Git installation
+  apt: name=git state=present
+
+- name: Java installation
+  apt: name=openjdk-7-jdk state=present
+
+- name: Debian repository key
+  apt_key: url=http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key state=present
+
+- name: Debian repository
+  apt_repository: repo='deb http://pkg.jenkins-ci.org/debian binary/' state=present
+
+- name: Jenkins package
+  apt: name=jenkins state=present
+
