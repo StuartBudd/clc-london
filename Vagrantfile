@@ -11,7 +11,7 @@ Vagrant.configure(2) do |config|
   config.vm.define "jenkinsMaster" do |jenkinsMaster|
      jenkinsMaster.vm.hostname = "jenkinsMaster"
      jenkinsMaster.vm.network "private_network", ip: "10.0.3.111"
-     config.vm.provision :shell, :inline => "sudo apt-get update;
+     jenkinsMaster.vm.provision :shell, :inline => "sudo apt-get update;
        sudo locale-gen de_DE.UTF-8
      "
   end
